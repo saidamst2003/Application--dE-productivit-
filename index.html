@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
- <link rel="stylesheet" href="STYLE.css">
+    <link rel="stylesheet" href="STYLE.css">
     <title>Document</title>
 </head>
 <body>
     
       <div class="timer-card d-flex flex-column justify-content-between " >
-         <div class="header-tabs">
-         <button type="button" class="btn btn-primary"  >Short Break</button>
-         <button type="button" class="btn btn-primary" >Push your limits</button>
-         <button type="button" class="btn btn-success" >Long Break</button>
-      </div>
-    <div class="timer mb-4">25:00</div>
-    <button class="btn btn-custom" style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 30px; padding: 20px 70px; border: none;">START</button>
-  </div>
- 
-
+         <div class="container">
+            <div class="section-container">
+              <button id="focus" class="btn btn-timer btn-focus">Short Break</button>
+              <button id="shortbreak" class="btn btn-shortbreak">Push your limits</button>
+              <button id="longbreak" class="btn btn-longbreak">Long Break</button>
+            </div>
+            <div class="time-btn-container">
+               <span id="time"></span>
+               <div class="btn-container">
+                 <button id="btn-start" class="show"  style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 30px; padding: 20px 70px; border: none;">Start</button>
+                  </div>
+                   <button id="btn-pause" class="hide"  style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; margin-top: 20px; padding: 10px 20px; border: none;">Pause</button>
+                 </div> 
+                 <button id="btn-reset" class="hide">
+                   <i class="fa-solid fa-rotate-right"></i>
+                 </button>
+                
+              
+               </div>
+            </div>
+ <script src="index.js"></script>
 </body>
 </html>
