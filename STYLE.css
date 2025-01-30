@@ -21,15 +21,12 @@ body {
     backdrop-filter: blur(10px);
   }
 
-  .timer {
-    margin: 20px;
-    font-size: 3rem;
-    font-weight:bolder;
-    color: #fff;
-  }
-
   .btn{
-    font-size: 18px; padding: 15px; background-color:transparent; color:#fff;border-radius: 20px; border: none;
+    font-size: 18px;
+    padding: 15px;
+    background-color:transparent;
+    color:#fff;border-radius: 20px; 
+    border: none;
   }
 
   .btn:hover {
@@ -38,4 +35,49 @@ body {
     color: #E2B8B8;
 
   }
- 
+
+  #time {
+    text-align: center;
+    color: #ffffff;
+    font-size: 5em;
+    font-weight: 600;
+  }
+  
+  #btn-start,
+  #btn-pause {
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  #btn-reset {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 2em;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .btn-container {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+  }
+  .time-btn-container {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .time-btn-container .btn-container .btn-pause,.btn-reset {
+    display: grid;
+    flex-direction: column;
+  
+  }
+  
