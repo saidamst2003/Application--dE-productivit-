@@ -58,6 +58,7 @@ body {
     font-size: 2em;
   }
   .hide {
+
     display: none;
   }
   .show {
@@ -80,4 +81,3 @@ body {
     flex-direction: column;
   
   }
-  
