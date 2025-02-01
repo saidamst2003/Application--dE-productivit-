@@ -5,33 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="STYLE.css">
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
 </head>
 <body>
 
- <div class="timer-card d-flex flex-column justify-content-between " >
-     <div class="container">
-        <div class="section-container">
-            <button  id="longbreak" class="btn btn-longbreak"> Long Break</button>
-              <button id="focus" class="btn btn-timer btn-focus">Push your limits</button>
-            <button id="shortbreak" class="btn btn-shortbreak">Short Break</button>
+    <body>
+        <div class="timer-card d-flex flex-column justify-content-between">
+            <div class="container">
+                <div class="section-container">
+                    <button id="longbreak" class="btn btn-longbreak">Long Break</button>
+                    <button id="focus" class="btn btn-timer btn-focus">Push your limits</button>
+                    <button id="shortbreak" class="btn btn-shortbreak">Short Break</button>
+                </div>
+                <div class="time-btn-container">
+                    <span id="time"></span>
+                    <div class="btn-container">
+                        <button id="btn-start" class="show" style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Start</button>
+                        <button id="btn-pause" class="hide" style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Pause</button>
+                        <button id="btn-reset" class="hide">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-     <div class="time-btn-container">
-         <span id="time"></span>
-           <div class="btn-container">
-                 <button id="btn-start" class="show"  style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Start</button>
-                   <button id="btn-pause" class="hide" style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Pause</button>
-                  <button id="btn-reset" class="hide"> 
-                <i class="fa-solid fa-rotate-right"></i>
-              </button>
-           </div>
-     </div>
-    </div>
- </div>
- <h1 style="color: #fcfafa; text-align: center; font-size: 50px;">Focus up!</h1>
-<strong ><label style=" margin: 380px;font-size: 30px; color:#fcfafa;">Task :</label></strong>
-<hr style="font-size: 20px; color: #fcfafa;width: 550px;">
- <button id="btn-start" class="show"  style="margin-left: auto;margin-right: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Add Task</button>
- <script src="index.js"></script>
+    
+        <h1 style="color: #fcfafa; text-align: center; font-size: 50px;">Focus up!</h1>
+        <strong><label style="margin: 380px; font-size: 30px; color:#fcfafa;">Task:</label></strong>
+        <div id="taskList"></div>
+        <hr class="divider">
+    
+        <button id="addTaskBtn" class="btn show" style="margin: 20px auto; display: block; background-color:#fcfafa; color: #E2B8B8;">Add Task</button>
+    
+        <!-- Task Modal -->
+        <div class="modal fade" id="taskModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="taskForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="taskTitle" placeholder="Title" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="taskDescription" placeholder="Description">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="taskPriority" placeholder="Priority">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addTask()">Save Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+        
+        <script src="index.js"></script>
+
 </body>
 </html>
