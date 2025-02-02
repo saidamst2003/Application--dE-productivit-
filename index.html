@@ -24,15 +24,15 @@
                         <button id="btn-start" class="show" style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Start</button>
                         <button id="btn-pause" class="hide" style="margin-top: auto; background-color:#fcfafa; color: #E2B8B8;border-radius: 10px; padding: 20px 60px; border: none;">Pause</button>
                         <button id="btn-reset" class="hide">
-                            <i class="fa-solid fa-rotate-right"></i>
+                        <i class="fa-solid fa-rotate-right"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     
-        <h1 style="color: #fcfafa; text-align: center; font-size: 50px;">Focus up!</h1>
-        <strong><label style="margin: 380px; font-size: 30px; color:#fcfafa;">Task:</label></strong>
+        <h1 class="H1">Focus up!</h1>
+        <strong><label class="lbl" >Task:</label></strong>
         <div id="taskList"></div>
         <hr class="divider">
     
@@ -45,7 +45,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">Add New Task</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+                   </div>
                     <div class="modal-body">
                         <form id="taskForm">
                             <div class="mb-3">
@@ -55,20 +55,24 @@
                                 <input type="text" class="form-control" id="taskDescription" placeholder="Description">
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="taskPriority" placeholder="Priority">
+                                <select class="form-select" id="taskPriority" required>
+                                    <option value="" disabled selected>Sélectionnez la priorité</option>
+                                    <option value="basse">Basse</option>
+                                    <option value="moyenne">Moyenne</option>
+                                    <option value="haute">Haute</option>
+                                </select>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="addTask()">Save Task</button>
+                        <button type="button" class="btnN btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btnN btn-primary" onclick="addTask()">Save Task</button>
                     </div>
                 </div>
             </div>
         </div>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-        
         <script src="index.js"></script>
 
 </body>

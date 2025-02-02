@@ -120,9 +120,6 @@ document.getElementById('addTaskBtn').addEventListener('click', () => {
 // Task management
 function addTask() {
     const title = document.getElementById('taskTitle').value;
-    const description = document.getElementById('taskDescription').value;
-    const priority = document.getElementById('taskPriority').value;
-
     if (!title) return;
 
     const taskList = document.getElementById('taskList');
@@ -130,10 +127,8 @@ function addTask() {
     taskItem.className = 'task-item';
     taskItem.innerHTML = `
         <h3>${title}</h3>
-        <p>${description}</p>
-        <p><strong>Priority:</strong> ${priority}</p>
         <button class="btn btn-danger" onclick="this.parentElement.remove()">Delete</button>
-    `;
+        `;
 
     taskList.appendChild(taskItem);
     
