@@ -132,6 +132,15 @@ body {
     align-items: center;
     height: 10vh; 
   }
-@media screen {
+  @media screen and (max-width:500px){
   
+    .btn{
+    
+      font-size: 15px !important;
+      padding: 15px  !important;
+      background-color:transparent  !important;
+      color:#fff  !important;
+      border-radius: 20px  !important; 
+      border: none  !important;
+    }
 }
